@@ -6,41 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+#JSON_Text {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    height: 25px;
+    width: 300px;
+}
+    </style>
+    
 </head>
 
-<body>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Bill</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="table_body">
-
-        </tbody>
+<body onload = "Setup()">
+<input type = "text" id = "JSON_Text">
+</input>
 
         <script>
-            fetch("GAMES.json")
-                .then(response => response.json())
-                .then(({rows}) => {
 
-                    console.log(rows);
-                    let tableData = "";
-                    rows.forEach((values => {
-                        tableData += `
-                        <tr>
-                            <td> ${values.Bill}</td >
-                            <td>${values.Action}</td>
-                        </tr > `;
+function Setup() {
+    var XMLHttp;
+    var JSON_Data;
+    var JSON_Output;
+    var URL;
+    
+    
+ URL = 'GAMES.json';
 
-                    }))
-                    document.getElementById("table_body").
-                        innerHTML = tableData;
-                })
-                .catch(console.error)
-
+     fetch(URL)
+          .then(res => res.json())
+          .then(data =>  {JSON_Data = data})
+          .then(() => {console.log(JSON_Data);
+          document.getElementById("JSON_Text").value = JSON_Data;
+          
+   });
+         
+          
+     
+    
+}             
         </script>
 </body>
 
