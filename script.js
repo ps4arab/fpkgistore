@@ -5,7 +5,7 @@ function fetchData() {
       console.log(data)
       let output = '<h2">Countries</h2>'
       data.forEach(function (item) {
-        output += '<a href="emailto:' + value.email + '">'  + value.name + '</a>';
+        output += `
         <ul>
           <li>Country: ${item.Country}</li>
           <li>CODE: ${item.ISO2}</li>
