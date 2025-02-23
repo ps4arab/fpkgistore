@@ -1,52 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-#JSON_Text {
-    position: absolute;
-    top: 200px;
-    left: 300px;
-    height: 25px;
-    width: 300px;
-}
-    </style>
-    
-</head>
-
-<body onload = "Setup()">
-<input type = "text" id = "JSON_Text">
-</input>
-
-        <script>
-
-function Setup() {
-    var XMLHttp;
-    var JSON_Data;
-    var JSON_Output;
-    var URL;
-    
-    
- URL = 'GAMES.json';
-
-     fetch(URL)
-          .then(res => res.json())
-          .then(data =>  {JSON_Data = data})
-          .then(() => {console.log(JSON_Data);
-          document.getElementById("JSON_Text").value = JSON_Data;
-          
-   });
-         
-          
-     
-    
-}             
-        </script>
+<html>
+<body>
+    <div>
+        <span class="extName">If you read this, it's not working</span>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('../GAMES.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const element = document.querySelector('.extName');
+                    if (element) {
+                        element.textContent = data.name;
+                    }
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        });
+    </script>        
 </body>
-
 </html>
