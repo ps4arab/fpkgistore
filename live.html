@@ -1,26 +1,19 @@
-<!DOCTYPE html>
 <html>
+<head></head>
 <body>
-    <div>
-        <span class="extName">If you read this, it's not working</span>
-    </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        function fetchJSONData() {
             fetch('./GAMES.json')
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('Not ok');
+                        throw new Error(`HTTP error! Status: ${response.status}`);
                     }
-                    return response.json();
+                    return response.json();  
                 })
-                .then(data => {
-                    const element = document.querySelector('.extName');
-                    if (element) {
-                        element.textContent = data.name;
-                    }
-                })
-                .catch(error => console.error('Error fetching JSON:', error));
-        });
-    </script>        
+                .then(data => console.log(data))  
+                .catch(error => console.error('Failed to fetch data:', error)); 
+        }
+        fetchJSONData();  
+    </script>
 </body>
 </html>
