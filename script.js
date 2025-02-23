@@ -7,7 +7,7 @@ function fetchData() {
       data.forEach(function (item) {
         output += `
         <ul>
-          <li>Country: ${item."Country"}</li>
+          <li>Country: ${item.Country}</li>
           <li>CODE: ${item.ISO2}</li>
         </ul>
       `
