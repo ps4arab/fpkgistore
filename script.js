@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch('GAMES.json')
+  fetch('countries.json')
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
@@ -7,12 +7,12 @@ function fetchData() {
       data.forEach(function (item) {
         output += `
         <ul>
-          <li>title_id: ${item.title_id}</li>
-          <li>name: ${item.name}</li>
+          <li>Country: ${item.Country}</li>
+          <li>CODE: ${item.ISO2}</li>
         </ul>
       `
       })
-      document.getElementById('title_id').innerHTML = output
+      document.getElementById('country').innerHTML = output
     })
     .catch((error) => {
       console.log(`Error Fetching data : ${error}`)
