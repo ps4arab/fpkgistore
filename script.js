@@ -5,9 +5,9 @@ function fetchData() {
       console.log(data)
       let output = '<h2">Countries</h2>'
       data.forEach(function (item) {
-        output += `
+        output += '<a href="`">link</a>'
         <ul>
-          <li>Country: "<a href='/"${item.Country}"'></a>"</li>
+          <li>Country: ${item.Country}</li>
           <li>CODE: ${item.ISO2}</li>
         </ul>
       `
