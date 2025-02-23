@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title> Live Store </title>
-  </head>
-  <body>
-    <ul id="countries">
-      <!-- -- -->
-    </ul>
 
-    <script>
-      main();
-      
-      async function main() {
-        const countries = await getData();
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        const countriesUl = document.querySelector("#countries");
+<body>
 
-        for (const country of countries) {
-          countriesUl.innerHTML += `<li></li>${country.name}`;
-        }
-      }
-      
-      async function getData() {
-        const res = await fetch("GAMES.json");
-        const data = await res.json();
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Bill</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
 
-        return data;
-      }
-    </script>
-  </body>
+        </tbody>
+
+        <script>
+            fetch("GAMES.json")
+                .then(response => response.json())
+                .then(({rows}) => {
+
+                    console.log(rows);
+                    let tableData = "";
+                    rows.forEach((values => {
+                        tableData += `
+                        <tr>
+                            <td> ${values.Bill}</td >
+                            <td>${values.Action}</td>
+                        </tr > `;
+
+                    }))
+                    document.getElementById("table_body").
+                        innerHTML = tableData;
+                })
+                .catch(console.error)
+
+        </script>
+</body>
+
 </html>
