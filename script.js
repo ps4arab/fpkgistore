@@ -7,12 +7,12 @@ function fetchData() {
       data.forEach(function (item) {
         output += `
         <ul>
-          <li>Country: ${item.Country}</li>
-          <li>CODE: ${item.ISO2}</li>
+          <li>title_id: ${item.title_id}</li>
+          <li>name: ${item.name}</li>
         </ul>
       `
       })
-      document.getElementById('country').innerHTML = output
+      document.getElementById('title_id').innerHTML = output
     })
     .catch((error) => {
       console.log(`Error Fetching data : ${error}`)
