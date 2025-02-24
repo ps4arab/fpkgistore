@@ -1,11 +1,10 @@
 [
-{
-  "description": "A little test ",
-},
-{
-  "description": "A little test 2",
-},
-{
-  "description": "A little test 3",
-},
+    {
+        "description": "Portugal",
+        "Slug": "PR",
+    },
+    {
+        "description": "Maroc",
+        "Slug": "MA",
+    },
 ]
