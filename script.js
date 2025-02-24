@@ -8,6 +8,7 @@ function fetchData() {
         output += `
         <ul>
           <li>description: ${item.description}</li>
+          <li>description: ${item.Slug}</li>
         </ul>
       `
       })
