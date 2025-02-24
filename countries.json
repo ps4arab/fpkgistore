@@ -1,17 +1,16 @@
 {
   "DATA": {
-        "description": "A little test ",
+    "https://www.google.com": {
+  "description": "A little test ",
         "Country": "Portugal",
         "Slug": "portugal",
-        "link_source":"https://www.google.com",
         "link_text":"Visit Google"
     },
-    {
+    "https://www.youtube.com": {
         "description": "A little test ",
         "Country": "Somalia",
         "Slug": "somalia",
-        "link_source":"https://www.youtube.com",
         "link_text":"Visit youtube"
-    }
-    }
+	}  	 					     
+  }
 }
