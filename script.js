@@ -19,5 +19,4 @@ function fetchData() {
       document.getElementById('country').innerHTML = 'Error Loading Data'
     })
 }
-
 fetchData()
