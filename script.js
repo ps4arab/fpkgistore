@@ -12,11 +12,11 @@ function fetchData() {
         </ul>
       `
       })
-      document.getElementById('description').innerHTML = output
+      document.getElementById('country').innerHTML = output
     })
     .catch((error) => {
       console.log(`Error Fetching data : ${error}`)
-      document.getElementById('description').innerHTML = 'Error Loading Data'
+      document.getElementById('country').innerHTML = 'Error Loading Data'
     })
 }
 
