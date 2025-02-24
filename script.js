@@ -8,8 +8,6 @@ function fetchData() {
         output += `
         <ul>
           <li>description: ${item.description}</li>
-          <li>CODE: ${item.link_source}</li>
-          <li>CODE: ${item.link_text}</li>
         </ul>
       `
       })
