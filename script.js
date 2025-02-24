@@ -8,7 +8,7 @@ function fetchData() {
         output += `
         <ul>
           <li>Country: ${item.Country}</li>
-          <li>CODE: ${item.ISO2}</li>
+          <li>CODE: ${item.link_source}</li>
         </ul>
       `
       })
