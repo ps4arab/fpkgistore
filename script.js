@@ -12,7 +12,7 @@ function fetchData() {
         </ul>
       `
       })
-      document.getElementById('link_source').innerHTML = output
+      document.getElementById('link_text').innerHTML = output
     })
     .catch((error) => {
       console.log(`Error Fetching data : ${error}`)
