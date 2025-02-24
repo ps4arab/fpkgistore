@@ -1,16 +1,16 @@
 {
-  "DATA": {
-    "https://www.google.com": {
-  "description": "A little test ",
-        "Country": "Portugal",
-        "Slug": "portugal",
-        "link_text":"Visit Google"
-    },
-    "https://www.youtube.com": {
-        "description": "A little test ",
-        "Country": "Somalia",
-        "Slug": "somalia",
-        "link_text":"Visit youtube"
-	}  	 					     
-  }
+    "example": [
+        {
+          "name": "Dr. Sammie Boyer",
+          "email": "Lavonne.Kiehn@hotmail.com"
+        },
+        {
+          "name": "Eladio Beier",
+          "email": "Lavonne.Kiehn@hotmail.com"
+        },
+        {
+          "name": "Hilton Borer",
+          "email": "Reva.Goyette@yahoo.com"
+        }
+    ]
 }
