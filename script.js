@@ -9,6 +9,7 @@ function fetchData() {
         <ul>
           <li>Country: ${item.Country}</li>
           <li>CODE: ${item.link_source}</li>
+          <li>CODE: ${item.link_text}</li>
         </ul>
       `
       })
