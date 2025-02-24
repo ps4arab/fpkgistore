@@ -2,11 +2,11 @@
     {
         "Country": "Portugal",
         "Slug": "portugal",
-        "ISO2": "PT"
+        "link_source":"https://www.google.com",
     },
     {
         "Country": "Somalia",
         "Slug": "somalia",
-        "ISO2": "SO"
+        "link_source":"https://www.youtube.com",
     }
 ]
