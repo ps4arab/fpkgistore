@@ -1,5 +1,5 @@
-[
-    "test":{
+{
+  "DATA": {
         "description": "A little test ",
         "Country": "Portugal",
         "Slug": "portugal",
@@ -13,4 +13,5 @@
         "link_source":"https://www.youtube.com",
         "link_text":"Visit youtube"
     }
-]
+    }
+}
