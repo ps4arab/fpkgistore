@@ -7,16 +7,16 @@ function fetchData() {
       data.forEach(function (item) {
         output += `
         <ul>
-          <li>Country: ${item.Country}</li>
+          <li>Country: ${item.link_source}</li>
           <li>CODE: ${item.ISO2}</li>
         </ul>
       `
       })
-      document.getElementById('country').innerHTML = output
+      document.getElementById('link_source').innerHTML = output
     })
     .catch((error) => {
       console.log(`Error Fetching data : ${error}`)
-      document.getElementById('country').innerHTML = 'Error Loading Data'
+      document.getElementById('link_source').innerHTML = 'Error Loading Data'
     })
 }
 
