@@ -1,10 +1,12 @@
 [
     {
         "Country": "Portugal",
-        "ISO2": "PR",
+        "Slug": "portugal",
+        "ISO2": "PT"
     },
     {
-        "description": "Maroc",
-        "ISO2": "MA",
-    },
+        "Country": "Somalia",
+        "Slug": "somalia",
+        "ISO2": "SO"
+    }
 ]
