@@ -1,17 +1,11 @@
 [
 {
-  "test":{ 
   "description": "A little test ",
-   }
 },
 {
-  "test":{ 
   "description": "A little test 2",
-   }
 },
 {
-  "test":{ 
   "description": "A little test 3",
-   }
 },
 ]
